@@ -29,6 +29,8 @@
     },
   ```
 
+#### install express
+  - npm i express
 
 #### Desativei a regra class-methods-use-this
   - fui em eslintrc.cjs em rules e adicionei o nome que o vscode estava me dando com propriedade off "class-methods-use-this": "off"
