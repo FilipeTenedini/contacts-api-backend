@@ -15,7 +15,7 @@
     - indent_size = 2 para 2 espaços ao tabular
 
 #### to start nodemon server
-    - npm install -g nodemon
+    - npm install -D nodemon
     - Passar o caminho relativo até o arquivo binário da biblioteca nodemon que fica em .bin da node_modules.
         - ./node_modules/.bin/nodemon src/index.js
             - esse caminho todo pode ser substituido por npx nodemon src/index.js / Após o npx, o nome do arquivo binário. Dessa forma ele já sabe que está dentro da pasta .bin
