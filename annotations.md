@@ -34,3 +34,45 @@
 
 #### Desativei a regra class-methods-use-this
   - fui em eslintrc.cjs em rules e adicionei o nome que o vscode estava me dando com propriedade off "class-methods-use-this": "off"
+
+
+
+<details>
+<summary>
+- Passo a Passo.
+</summary>
+
+
+<details>
+<summary>
+  Inicializando o servidor express
+</summary>
+- No index.js importe o express
+
+```
+  const express = require('express);
+```
+
+- Adicione uma const app que irá armazenar a instância do express.
+```
+  const app = express();
+```
+
+- Para adicionar uma rota, ou seja, app.MÉTODO
+```
+  app.get('/', (request, response) => {
+    response.send('Hello World');
+  });
+```
+
+- Para subir o express em uma porta é só executar
+```
+app.listen(3000, () => console.log('Server started at http://localhost:3000));
+```
+</details>
+
+
+
+
+
+</details>
