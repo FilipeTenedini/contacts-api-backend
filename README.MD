@@ -4,6 +4,7 @@ Esse repositório foi feito com o intuito de documentar minha primeira criação
 - [ ] Express
 - [ ] ESLint
 - [ ] Singleton Pattern
+- [ ] Repository Pattern
 
 <details>
 <summary>
@@ -35,3 +36,18 @@ Para o verbo HTTP PUT/PATCH, em algumas convenções, o método pode ser nomeado
 
 </details>
 
+<details>
+<summary>
+Repository Pattern
+</summary>
+- O Repository Pattern diz que precisamos ter uma camada de abstração de acesso ao Data Source
+- Ou seja, nosso controller não tem acesso ao nosso Data Source.
+  - O Controller conhece o Repository e o Repository fala com o Data Source.
+    - Controller < -- > Repository < -- > Data Source
+
+Exemplo de uso:
+O controller chama a função create do Repository e ele é que vai saber se vai buscar a informação em um banco de dados, eum mock ou seja lá o que for, no Controller será executado dessa forma:
+```jsx
+Repository.create();
+```
+</details>

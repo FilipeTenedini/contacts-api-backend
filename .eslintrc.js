@@ -12,5 +12,7 @@ module.exports = {
   },
   rules: {
     'class-methods-use-this': 'off',
+    'no-promise-executor-return': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };

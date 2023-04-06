@@ -36,12 +36,9 @@
   - fui em eslintrc.cjs em rules e adicionei o nome que o vscode estava me dando com propriedade off "class-methods-use-this": "off"
 
 
+<br><br>
 
-<details>
-<summary>
-- Passo a Passo.
-</summary>
-
+### Passo a Passo.
 
 <details>
 <summary>
@@ -71,8 +68,43 @@ app.listen(3000, () => console.log('Server started at http://localhost:3000));
 ```
 </details>
 
+<details>
+<summary>
+  Criando o controller
+</summary>
+- Crie uma pasta chamada app
+- Dentro dela uma pasta controllers
+  - adicione o seu arquivo controller, no caso ContactController.js
+    - Neste caso para padronizar o controller será usando Singleton Pattern e a convenção de nomeclatura
+
+Dentro desse arquivo adicione os métodos de controle.
+```
+class ContactController() {
+  index () {
+
+  }
+
+  show() {
+
+  }
+
+  store() {
 
 
+  }
 
+  update() {
+
+  }
+
+  delete() {
+
+  }
+}
+
+module.exports = new ContactController();
+```
+
+</details>
 
 </details>
