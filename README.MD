@@ -46,8 +46,12 @@ Repository Pattern
     - Controller < -- > Repository < -- > Data Source
 
 Exemplo de uso:
-O controller chama a função create do Repository e ele é que vai saber se vai buscar a informação em um banco de dados, eum mock ou seja lá o que for, no Controller será executado dessa forma:
+O controller chama a função create do Repository e ele é que vai saber se vai buscar a informação em um banco de dados, eum mock ou seja lá o que for que usaremos, não é responsabilidade do Controller saber disso. No Controller será executado dessa forma, por exemplo:
 ```jsx
 Repository.create();
 ```
+
+Neste projeto utilizamos método assíncrono dentro do Repository, porém, na promise só retornamos o Resolve, sem reject.
+Por que?
+Porque a regra de negócio ela NUNCA vai ficar dentro do Repository. A gente nunca téra uma condicional dentro do Repository, por exemplo. Não importa pra ele, quem irá tratar isso é o Controller. A unica finalidade do Repository é acessar o Data Source. Não importa por exemplo, usando banco de dados, saber se a conexão está estabelecida ou não tá, quem irá tratar isso é o Controller.
 </details>
