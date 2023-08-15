@@ -5,7 +5,7 @@ const contactsRouter = Router();
 
 contactsRouter.get('/', ContactController.index);
 contactsRouter.get('/:id', ContactController.show);
-contactsRouter.post('', ContactController.store);
+contactsRouter.post('/', ContactController.store);
 contactsRouter.delete('/:id', ContactController.delete);
 contactsRouter.put('/:id', ContactController.update);
 
