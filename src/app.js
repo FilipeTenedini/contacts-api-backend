@@ -7,4 +7,4 @@ app.use(express.json());
 
 app.use(router);
 
-app.listen(4000, () => console.log('Server started at http://localhost:4000'));
+export default app;
