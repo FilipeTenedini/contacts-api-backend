@@ -1,5 +1,3 @@
-// Contato com o Data Source;
-
 const { v4 } = require('uuid');
 
 let contacts = [
@@ -61,4 +59,4 @@ class ContactsRepository {
   }
 }
 
-module.exports = new ContactsRepository();
+export default new ContactsRepository();

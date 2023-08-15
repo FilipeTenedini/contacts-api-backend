@@ -17,5 +17,6 @@ module.exports = {
     'no-console': 'off',
     'consistent-return': 'off',
     camelcase: 'off',
+    'import/extensions': 'off',
   },
 };

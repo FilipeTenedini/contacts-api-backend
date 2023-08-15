@@ -5,6 +5,7 @@
     "eslint-plugin-import": "^2.27.5",
     "nodemon": "^2.0.22"
   },
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js"
   },
