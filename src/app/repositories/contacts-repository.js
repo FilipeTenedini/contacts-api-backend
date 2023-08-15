@@ -1,4 +1,4 @@
-const { v4 } = require('uuid');
+import { v4 } from 'uuid';
 
 let contacts = [
   {
@@ -48,6 +48,26 @@ class ContactsRepository {
 
       contacts.push(newContact);
       resolve(newContact);
+    });
+  }
+
+  update(id, {
+    name, email, phone, category_id,
+  }) {
+    return new Promise((resolve) => {
+      const updatedContact = {
+        id: v4(),
+        name,
+        email,
+        phone,
+        category_id,
+      };
+
+      contacts = contacts.map((contact) => (
+        contact.id === id ? updatedContact : contact
+      ));
+
+      resolve(contacts);
     });
   }
 
