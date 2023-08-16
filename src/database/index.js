@@ -6,7 +6,7 @@ const {
   DB_HOST, DB_PORT, DB_USER, DB_PASS, DB_NAME,
 } = process.env;
 
-const db = new Client({
+const client = new Client({
   host: DB_HOST,
   port: DB_PORT,
   user: DB_USER,
@@ -14,6 +14,11 @@ const db = new Client({
   database: DB_NAME,
 });
 
-db.connect();
+client.connect();
 
-export default { }
+const query = async (query, values) => {
+  const { rows } = await client.query(query, values);
+  return rows;
+}
+
+export default { query };

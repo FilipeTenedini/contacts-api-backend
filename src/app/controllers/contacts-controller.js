@@ -2,8 +2,8 @@ import ContactsRepository from '../repositories/contacts-repository.js';
 
 class ContactController {
   async index(req, res) {
-    // listar todos registro
-    const contacts = await ContactsRepository.findAll();
+    const { orderBy } = req.query;
+    const contacts = await ContactsRepository.findAll(orderBy);
 
     res.send(contacts);
   }
@@ -57,16 +57,11 @@ class ContactController {
     const contact = await ContactsRepository.update(id, {
       name, email, phone, category_id,
     });
-    console.log(contact);
     res.json(contact);
   }
 
   async delete(req, res) {
     const { id } = req.params;
-
-    const contact = await ContactsRepository.findById(id);
-
-    if (!contact) return res.status(404).json({ error: 'User not found' });
 
     await ContactsRepository.delete(id);
 

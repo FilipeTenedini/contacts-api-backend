@@ -1,0 +1,20 @@
+docker ps    =>    ver todos containers que estão rodando dentro da maquina
+docker ps -a =>    ver todos container independente de estar rodando ou não
+docker start <NAME do container ou CONTAINER ID>  =>  starta o container
+docker stop <NAME do container ou CONTAINER ID>   =>  parar o container
+docker image ls  => exibe todas imagens que tem na máquina
+docker rmi <REPOSITORY ou IMAGE ID> => deleta a imagem (você precisa stopar o container antes)
+docker exec -it <NAME do container> bash => acessar o container
+
+
+comando que utilizei para criar a imagem
+docker run --name pg -e POSTGRES_USER=root -e POSTGRES_PASSWORD=root -p 5432:5432 -d postgres
+
+psql -U <nome do usuario que definimos quando demos docker run> => vai acessar o usuario do postgres
+
+
+Identify what is running in port 5432: sudo lsof -i :5432
+
+Kill all the processes that are running under this port: sudo kill -9 <pid>
+
+Run the command again to verify no process is running now: sudo lsof -i :5432
