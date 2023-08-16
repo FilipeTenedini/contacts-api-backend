@@ -18,5 +18,6 @@ module.exports = {
     'consistent-return': 'off',
     camelcase: 'off',
     'import/extensions': 'off',
+    'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
   },
 };
